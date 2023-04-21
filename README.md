@@ -6,14 +6,14 @@
 ![image](https://user-images.githubusercontent.com/128770464/233538844-8c9ce998-56a9-44a0-915d-e1caa83f3378.png)
 - This script's purpose is to simplify the process of creating the same EventBridge rules in many accounts
 ### How to use
-- Requirements:
+#### - Requirements:
   + Know how to work with Git.
   + Know how to work with Python.
   + Know how to work with AWS CLI.
-- Steps:
-  1) Clone this repo to local.
-  2) Log in AWS in local terminal (aws configure). Make sure that your account has AdministratorAccess role attached for all child accounts.
-  3) Go to file accounts_config.yml, put all the accounts that you want to forward events to the central account in. For example:
+#### - Steps:
+#####  1) Clone this repo to local.
+#####  2) Log in AWS in local terminal (aws configure). Make sure that your account has AdministratorAccess role attached for all child accounts.
+#####  3) Go to file accounts_config.yml, put all the accounts that you want to forward events to the central account in. For example:
 
 ```
 target_accounts:
@@ -27,7 +27,7 @@ target_accounts:
     rules: ['rule1']
 ```
 
-  4) Go to rules_config.yml, put in the rules to set the events that you want to forward to the central account. For example, the following rules are for AWS Health and RDS:
+#####  4) Go to rules_config.yml, put in the rules to set the events that you want to forward to the central account. For example, the following rules are for AWS Health and RDS:
 
 ```
 rules:
@@ -45,8 +45,7 @@ rules:
     region: 'ap-southeast-1'
 ```
 
-  5) Run the script:
-
+#####  5) Run the script:
     + With one account `python main.py --account 'account_name'`
     + With multiple accounts `python main.py --account 'list_of_account'` (accounts need to be separated by a comma ",". For example: `python main.py --account 'account1','account2','account3'`)
     + With all accounts python main.py --all-account true
