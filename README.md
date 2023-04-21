@@ -1,0 +1,1 @@
+# aws-create-eventbridge-rules
