@@ -1,0 +1,14 @@
+rules:
+  - id: 'rule1'
+    name: 'forward-health-events'
+    event_pattern: "{\"source\":[\"aws.health\"]}"
+    description: 'Forward all health events to central account'
+    target_arn: 'arn:aws:events:ap-northeast-1:222222222222:event-bus/default'
+    region: 'ap-southeast-1'
+    
+  - id: 'rule2'
+    name: 'forward-rds-events'
+    event_pattern: "{\"source\": [\"aws.rds\"]}"
+    description: 'Forward all RDS events to central account'
+    target_arn: 'arn:aws:events:ap-northeast-1:222222222222:event-bus/default'
+    region: 'ap-southeast-1'
