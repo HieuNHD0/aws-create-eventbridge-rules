@@ -1,0 +1,14 @@
+source_account:
+  name: 'central-account'
+  role_arn: 'arn:aws:iam::222222222222:role/LoginRoleAdministratorAccess'
+
+target_accounts:
+- name: 'childaccount1-111111111111'
+  role_arn: 'arn:aws:iam::111111111111:role/LoginRoleAdministratorAccess'
+  id: '143305081105'
+  rules: ['1','2']
+
+- name: 'childaccount2-111111111112'
+  role_arn: 'arn:aws:iam::111111111112:role/LoginRoleAdministratorAccess'
+  id: '111111111112'
+  rules: ['1','2']
